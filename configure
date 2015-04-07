@@ -110,6 +110,8 @@ else
 	echo ''
 	echo "CFLAGS += -Wall -Werror"
 	echo ''
+	echo "LDFLAGS += "
+	echo ''
 
 	for f in ${HDRS}
 	do
@@ -142,7 +144,7 @@ else
 
 	echo
 	echo "ntimed-client:	${l}"
-	echo "	\${CC} \${CFLAGS} -o ntimed-client ${l} -lm"
+	echo "	\${CC} \${CFLAGS} \${LDFLAGS} -o ntimed-client ${l} -lm"
 	echo
 	echo "clean:"
 	echo "	rm -f ${l} ntimed-client"
