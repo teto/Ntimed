@@ -171,7 +171,7 @@ UdpTimedRx(struct ocx *ocx, const struct udp_socket *usc,
 			continue;
 		}
 #endif
-		Debug(ocx, "RX-msg: %d %d %u ",
+		Debug(ocx, "RX-msg: level=%d type=%d len=%u ",
 		    cmsg->cmsg_level, cmsg->cmsg_type, cmsg->cmsg_len);
 		DebugHex(ocx, CMSG_DATA(cmsg), cmsg->cmsg_len);
 		Debug(ocx, "\n");
